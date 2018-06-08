@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 p-5 ">
+      <span class="border-bottom border-primary ">
+        <div class="d-flex justify-content-center" style="font-size:30px">
+          Bienvenido al juego de Piedra, Papel y Tijeras
+        </div>
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-4">
+      <app-chat></app-chat>
+    </div>
+    <div class="col-4">
+      <div class="row">
+        <div *ngFor="let opcion of this.opciones" class="col-4">
+          <button class="btn btn-primary btn-small botones " (click)="realizarJugada(opcion.nombre)">
+            <img style="width:10rem; height:10rem" src="{{opcion.img}}">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" id="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Piedra,papel,tijeras</h5>
+          <span aria-hidden="true">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>{{this.informacion}}</p>
+      </div>
+    </div>
+  </div>
+</div>

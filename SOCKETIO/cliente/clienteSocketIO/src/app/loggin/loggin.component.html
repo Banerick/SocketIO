@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 p-5 ">
+      <span class="border-bottom border-primary ">
+        <div class="d-flex justify-content-center" style="font-size:30px">
+          Bienvenido al juego de Piedra, Papel y Tijeras
+        </div>
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 m-3 p-2">
+    </div>
+    <div class="col-4">
+      <div class="form-group d-flex justify-content-center">
+        <input type="text" class="form-control" placeholder="Introduce nombre de usuario"
+               [(ngModel)]="logginUser"
+               name="logginUser">
+        <small id="errorS" style="font-color:red;" class="form-text text-muted"></small>
+        <button type="button" class="btn btn-primary" (click)="connectUser()">Aceptar</button>
+      </div>
+      <div class="d-flex justify-content-center">
+        <p class="text-primary">Nota: ¡Piedra vence a Tijeras, Tijeras a Papel y este a Piedra!</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <span class="border-left border-primary"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <span class="border-bottom border-primary"> </span>
+    </div>
+  </div>
+</div>
+

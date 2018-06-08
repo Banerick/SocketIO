@@ -1,0 +1,8 @@
+<div style="height: 25rem" class="bg-light">
+  <span *ngFor="let data of conversacion">{{data}}:{{data.mensaje}}<br></span>
+</div>
+<div class="form-group d-flex justify-content-end">
+  <input class="form-control" name="enviar" [(ngModel)]="mensaje"/>
+  <button class="btn btn-primary" (click)="sendMessage()">Send</button>
+</div>
+<br><br>
